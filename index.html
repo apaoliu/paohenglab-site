@@ -57,7 +57,7 @@
 
     .album-link {
       display: inline-block;
-      margin-top: 18px;
+      margin-top: 0;
       padding: 11px 22px;
       border: 1px solid #222;
       border-radius: 999px;
@@ -69,6 +69,10 @@
     .album-link:hover {
       background: #222;
       color: #faf8f3;
+    }
+
+    .album-action {
+      margin-top: 18px;
     }
 
     .blog-hint {
@@ -129,7 +133,11 @@
       <span class="blog-hint blog-hint-desktop" aria-hidden="true">← Click here</span>
       <span class="blog-hint blog-hint-mobile" aria-hidden="true">Click here ↑</span>
     </div>
-    <a class="album-link" href="album/">瀏覽實驗相本</a>
+    <div class="blog-action album-action">
+      <a class="album-link" href="album/">瀏覽實驗相本</a>
+      <span class="blog-hint blog-hint-desktop" aria-hidden="true">← Click here</span>
+      <span class="blog-hint blog-hint-mobile" aria-hidden="true">Click here ↑</span>
+    </div>
   </main>
 </body>
 </html>
