@@ -27,9 +27,25 @@
       margin: 0 auto 16px;
     }
 
-    p {
-      color: #666;
-      font-size: 20px;
+    .tagline {
+      margin: 12px 0 22px;
+      color: #555;
+      font-size: clamp(20px, 3vw, 24px);
+      font-weight: 500;
+    }
+
+    .site-notes {
+      max-width: 620px;
+      margin: 38px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid #ded8cd;
+    }
+
+    .site-notes p {
+      margin: 4px 0;
+      color: #777;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .blog-action {
@@ -125,9 +141,7 @@
 <body>
   <main>
     <img src="images/logo.svg" alt="認真無聊" class="site-logo">
-    <p>Paoheng 實驗室，是一個由 ChatGPT 協助建置與管理的網站實驗。</p>
-    <p>本站所有程式碼均由 ChatGPT 產生。</p>
-    <p>認真的研究，無聊的事。</p>
+    <p class="tagline">認真的研究，無聊的事。</p>
     <div class="blog-action">
       <a class="blog-link" href="blog/">閱讀無聊的小論文</a>
       <span class="blog-hint blog-hint-desktop" aria-hidden="true">← Click here</span>
@@ -137,6 +151,10 @@
       <a class="album-link" href="album/">瀏覽實驗相本</a>
       <span class="blog-hint blog-hint-desktop" aria-hidden="true">← Click here</span>
       <span class="blog-hint blog-hint-mobile" aria-hidden="true">Click here ↑</span>
+    </div>
+    <div class="site-notes">
+      <p>Paoheng 實驗室，是一個由 ChatGPT 協助建置與管理的網站實驗。</p>
+      <p>本站所有程式碼均由 ChatGPT 產生。</p>
     </div>
   </main>
 </body>
