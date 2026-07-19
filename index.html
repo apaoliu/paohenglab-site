@@ -5,8 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paoheng Lab｜認真無聊</title>
   <style>
-    body{margin:0;font-family:Arial,"Microsoft JhengHei",sans-serif;background:#faf8f3;color:#222;display:grid;place-items:center;min-height:100vh;text-align:center}main{padding:48px 24px}.site-logo{display:block;width:min(620px,86vw);height:auto;margin:0 auto 16px}p{color:#666;font-size:20px}.blog-link{display:inline-block;margin-top:14px;padding:11px 22px;border:1px solid #222;border-radius:999px;color:#222;text-decoration:none;font-weight:700}.blog-link:hover{background:#222;color:#faf8f3}
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      background: #faf8f3;
+      color: #222;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    main {
+      padding: 48px 24px;
+    }
+
+    .site-logo {
+      display: block;
+      width: min(620px, 86vw);
+      height: auto;
+      margin: 0 auto 16px;
+    }
+
+    p {
+      color: #666;
+      font-size: 20px;
+    }
+
+    .blog-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .blog-link {
+      display: inline-block;
+      padding: 11px 22px;
+      border: 1px solid #222;
+      border-radius: 999px;
+      color: #222;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .blog-link:hover {
+      background: #222;
+      color: #faf8f3;
+    }
+
+    .blog-hint {
+      color: #7b4f34;
+      font-family: "Comic Sans MS", "Segoe Print", cursive;
+      font-size: 17px;
+      font-weight: 700;
+      white-space: nowrap;
+      transform: rotate(-4deg);
+      animation: nudge 1.3s ease-in-out infinite;
+    }
+
+    @keyframes nudge {
+      0%, 100% { transform: translateX(0) rotate(-4deg); }
+      50% { transform: translateX(-6px) rotate(-4deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-hint { animation: none; }
+    }
+
+    @media (max-width: 520px) {
+      .blog-action {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .blog-hint {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
-<body><main><img src="images/logo.svg" alt="認真無聊" class="site-logo"><p>Paoheng Lab 測試頁面</p><p>認真的研究，無聊的事。</p><a class="blog-link" href="blog/">閱讀無聊的小論文</a></main></body>
+<body>
+  <main>
+    <img src="images/logo.svg" alt="認真無聊" class="site-logo">
+    <p>Paoheng Lab 測試頁面</p>
+    <p>認真的研究，無聊的事。</p>
+    <div class="blog-action">
+      <a class="blog-link" href="blog/">閱讀無聊的小論文</a>
+      <span class="blog-hint" aria-hidden="true">← Click here</span>
+    </div>
+  </main>
+</body>
 </html>
