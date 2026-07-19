@@ -15,12 +15,24 @@
     h1{font-size:clamp(34px,7vw,60px);line-height:1.2;margin:22px 0 8px}
     .lead{color:var(--muted);margin:0;max-width:620px}
     main{padding:36px 0 72px}
-    .empty{background:var(--paper);border:1px dashed #c9c0b3;border-radius:20px;padding:clamp(34px,8vw,80px) 24px;text-align:center}
-    .empty-icon{font-size:52px;line-height:1;margin-bottom:18px}
-    .empty h2{margin:0 0 8px;font-size:26px}
-    .empty p{color:var(--muted);margin:0 auto;max-width:520px}
-    .how{margin-top:18px;font-size:14px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px}
+    .photo-card{overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 32px rgba(45,38,29,.07)}
+    .photo-link{display:block;overflow:hidden;background:#ece8df}
+    .photo-link img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .35s ease}
+    .photo-link:hover img{transform:scale(1.025)}
+    .caption{padding:24px}
+    .location{color:var(--accent);font-size:14px;font-weight:700;letter-spacing:.06em}
+    h2{margin:5px 0 12px;font-size:clamp(24px,4vw,32px);line-height:1.35}
+    .caption p{margin:0 0 14px;color:#4f504b}
+    .aside{padding-top:14px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+    .aside strong{color:var(--ink)}
+    .quote{margin:16px 0 0;padding-left:15px;border-left:3px solid var(--accent);color:var(--accent);font-weight:700}
+    .meta{margin-top:18px;color:var(--muted);font-size:13px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+    .tag{padding:3px 9px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
     footer{border-top:1px solid var(--line);padding:24px 0 48px;color:var(--muted);font-size:14px}
+    @media(max-width:560px){header{padding-top:26px}.caption{padding:20px}.photo-card{border-radius:16px}}
+    @media(prefers-reduced-motion:reduce){.photo-link img{transition:none}}
   </style>
 </head>
 <body>
@@ -30,11 +42,23 @@
     <p class="lead">照片不一定偉大，記下來就可能變成一場小實驗。</p>
   </header>
   <main>
-    <section class="empty" aria-label="相本目前沒有照片">
-      <div class="empty-icon" aria-hidden="true">☕</div>
-      <h2>第一張照片還在路上</h2>
-      <p>這裡將收藏照片、拍攝日期與一小段描述。相片由 Paoheng 上傳，再由 ChatGPT 整理與發布。</p>
-      <p class="how">新增方式：把照片、描述與日期交給 ChatGPT，AI 會自動加入相本。</p>
+    <section class="gallery" aria-label="照片列表">
+      <article class="photo-card">
+        <a class="photo-link" href="photos/chiayi-kano-baseball.webp" aria-label="開啟嘉義棒球場 KANO 照片原圖">
+          <img src="photos/chiayi-kano-baseball.webp" alt="嘉義棒球場旁的 KANO 巨型棒球裝置，草地上有遊客停留拍照" width="1000" height="667">
+        </a>
+        <div class="caption">
+          <div class="location">嘉義 · 棒球記憶</div>
+          <h2>嘉義棒球場｜KANO 的棒球記憶</h2>
+          <p>KANO 是「嘉義農林學校」棒球隊的簡稱。1931 年，嘉農首度進軍日本夏季甲子園便勇奪亞軍，讓嘉義成為臺灣棒球史的重要起點。</p>
+          <p class="aside">因此，嘉義棒球場旁的 KANO 裝置，不只是地名標誌，也是在紀念嘉農球員跨越族群、堅持到底的棒球精神。</p>
+          <p class="quote">一顆不能投、不能打的巨大棒球，裝著嘉義近百年的棒球記憶。</p>
+          <div class="meta">攝影：Paoheng</div>
+          <div class="tags" aria-label="標籤">
+            <span class="tag">嘉義</span><span class="tag">棒球</span><span class="tag">KANO</span><span class="tag">城市風景</span><span class="tag">日常觀察</span>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
   <footer>© 2026 Paoheng Lab · 本站程式碼由 ChatGPT 產生。</footer>
