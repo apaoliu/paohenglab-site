@@ -70,6 +70,10 @@
       50% { transform: translateX(-6px) rotate(-4deg); }
     }
 
+    .blog-hint-mobile {
+      display: none;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .blog-hint { animation: none; }
     }
@@ -80,8 +84,20 @@
         gap: 6px;
       }
 
-      .blog-hint {
-        font-size: 15px;
+      .blog-hint-desktop {
+        display: none;
+      }
+
+      .blog-hint-mobile {
+        display: inline-block;
+        font-size: 14px;
+        transform: rotate(-2deg);
+        animation-name: nudge-up;
+      }
+
+      @keyframes nudge-up {
+        0%, 100% { transform: translateY(0) rotate(-2deg); }
+        50% { transform: translateY(-4px) rotate(-2deg); }
       }
     }
   </style>
@@ -93,7 +109,8 @@
     <p>認真的研究，無聊的事。</p>
     <div class="blog-action">
       <a class="blog-link" href="blog/">閱讀無聊的小論文</a>
-      <span class="blog-hint" aria-hidden="true">← Click here</span>
+      <span class="blog-hint blog-hint-desktop" aria-hidden="true">← Click here</span>
+      <span class="blog-hint blog-hint-mobile" aria-hidden="true">Click here ↑</span>
     </div>
   </main>
 </body>
