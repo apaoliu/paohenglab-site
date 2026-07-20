@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description | escape }}">
+  <title>{{ page.title }}｜Paoheng Lab</title>
+  <link rel="stylesheet" href="{{ '/assets/css/paper.css' | relative_url }}">
+</head>
+<body>
+  <header><a href="{{ '/blog/' | relative_url }}">← 回到「無聊的小論文」</a></header>
+  <main>
+    <span class="category">{{ page.category }}</span>
+    <h1>{{ page.title }}</h1>
+    <div class="meta">發布於 {{ page.date | date: "%Y 年 %-m 月 %-d 日" }} · {{ page.topic }}</div>
+    {{ content }}
+  </main>
+  <footer>© 2026 Paoheng Lab · 認真的研究，無聊的事。</footer>
+</body>
+</html>
+
