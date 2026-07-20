@@ -1,0 +1,27 @@
+:root{--bg:#faf8f3;--paper:#fffdf8;--ink:#1c1d1b;--muted:#696a64;--accent:#7b4f34;--line:#ded8cd}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.8}
+header,main,footer{width:min(1040px,calc(100% - 40px));margin:auto}
+header{padding:38px 0 26px;border-bottom:1px solid var(--line)}
+.brand{color:var(--ink);text-decoration:none;font-weight:700}
+h1{font-size:clamp(34px,7vw,60px);line-height:1.2;margin:22px 0 8px}
+.lead{color:var(--muted);margin:0;max-width:620px}
+main{padding:36px 0 72px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px}
+.photo-card{overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 32px rgba(45,38,29,.07)}
+.photo-link{display:block;overflow:hidden;background:#ece8df}
+.photo-link img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .35s ease}
+.photo-link:hover img{transform:scale(1.025)}
+.caption{padding:24px}
+.location{color:var(--accent);font-size:14px;font-weight:700;letter-spacing:.06em}
+h2{margin:5px 0 12px;font-size:clamp(24px,4vw,32px);line-height:1.35}
+.caption p{margin:0 0 14px;color:#4f504b}
+.aside{padding-top:14px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.quote{margin:16px 0 0;padding-left:15px;border-left:3px solid var(--accent);color:var(--accent);font-weight:700}
+.meta{margin-top:18px;color:var(--muted);font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.tag{padding:3px 9px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:24px 0 48px;color:var(--muted);font-size:14px}
+@media(max-width:560px){header{padding-top:26px}.caption{padding:20px}.photo-card{border-radius:16px}}
+@media(prefers-reduced-motion:reduce){.photo-link img{transition:none}}
+
