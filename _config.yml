@@ -1,0 +1,16 @@
+title: Paoheng Lab
+description: 認真的研究，無聊的事。
+lang: zh-Hant
+timezone: Asia/Taipei
+url: https://apaoliu.github.io
+baseurl: /paohenglab-site
+markdown: kramdown
+permalink: /blog/:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: paper
+
